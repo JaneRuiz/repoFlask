@@ -9,3 +9,6 @@ def index():         # Se define la funcion
 
     return render_template('index.html', vacantes=vacantes)  #se envia a la vista
 
+@main_bp.route('/acerca')
+def acerca():
+    return render_template('acerca.html')

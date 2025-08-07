@@ -2,6 +2,7 @@ from flask import Flask
 from .models import db, Usuario
 import os
 from .routes.main_routes import main_bp
+from .routes.vacante_routes import vacante_bp
 
 def create_app():    #es la funcion que sirve para inicializar y crear la app
     app = Flask(__name__)
@@ -24,7 +25,9 @@ def create_app():    #es la funcion que sirve para inicializar y crear la app
             db.session.commit()
     
     app.register_blueprint(main_bp)
-    return app    #REtorna la instancia 
+    app.register_blueprint(vacante_bp)
+
+    return app                        #REtorna la instancia 
 
 
 
