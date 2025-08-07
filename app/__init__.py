@@ -28,8 +28,3 @@ def create_app():    #es la funcion que sirve para inicializar y crear la app
     app.register_blueprint(vacante_bp)
 
     return app                        #REtorna la instancia 
-
-
-
-
-
